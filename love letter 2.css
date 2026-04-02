@@ -11,12 +11,18 @@
         align-items: center;
         justify-content: center;
         overflow-x: hidden;
+        position: relative;
+      }
+
+      body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
         background-image: url("bg.jpg");
-        background-size: min(100vw, calc(100vh * 16 / 9)) min(100vh, calc(100vw * 9 / 16));
+        background-size: cover;
         background-position: center center;
         background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-color: #000;
+        z-index: -2;
       }
 
       body::after {
